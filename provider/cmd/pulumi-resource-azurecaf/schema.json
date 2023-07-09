@@ -1,0 +1,539 @@
+{
+    "name": "azurecaf",
+    "description": "A Pulumi package for creating and managing azurecaf cloud resources.",
+    "keywords": [
+        "pulumi",
+        "azurecaf",
+        "category/cloud"
+    ],
+    "homepage": "https://www.pulumi.com",
+    "license": "Apache-2.0",
+    "attribution": "This Pulumi package is based on the [`azurecaf` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurecaf).",
+    "repository": "https://github.com/pulumi/pulumi-azurecaf",
+    "publisher": "Pulumi",
+    "meta": {
+        "moduleFormat": "(.*)(?:/[^/]*)"
+    },
+    "language": {
+        "csharp": {
+            "compatibility": "tfbridge20",
+            "namespaces": null,
+            "packageReferences": {
+                "Pulumi": "3.*"
+            },
+            "rootNamespace": "BinaryBrilliance"
+        },
+        "go": {
+            "generateExtraInputTypes": true,
+            "generateResourceContainerTypes": true,
+            "importBasePath": "github.com/BinaryBrilliance/pulumi-azurecaf/sdk/go/azurecaf"
+        },
+        "nodejs": {
+            "compatibility": "tfbridge20",
+            "dependencies": {
+                "@pulumi/pulumi": "^3.0.0"
+            },
+            "devDependencies": {
+                "@types/mime": "^2.0.0",
+                "@types/node": "^10.0.0"
+            },
+            "disableUnionOutputTypes": true,
+            "packageDescription": "A Pulumi package for creating and managing azurecaf cloud resources.",
+            "packageName": "@BinaryBrilliance/azurecaf",
+            "pluginName": "",
+            "pluginVersion": "",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurecaf)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-azurecaf` repo](https://github.com/pulumi/pulumi-azurecaf/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-azurecaf` repo](https://github.com/terraform-providers/terraform-provider-azurecaf/issues).",
+            "typescriptVersion": ""
+        },
+        "python": {
+            "compatibility": "tfbridge20",
+            "packageName": "BinaryBrilliance_azurecaf",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurecaf)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-azurecaf` repo](https://github.com/pulumi/pulumi-azurecaf/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-azurecaf` repo](https://github.com/terraform-providers/terraform-provider-azurecaf/issues).",
+            "requires": {
+                "pulumi": "\u003e=3.0.0,\u003c4.0.0"
+            }
+        }
+    },
+    "config": {},
+    "provider": {
+        "description": "The provider type for the azurecaf package. By default, resources use package-wide configuration\nsettings, however an explicit `Provider` instance may be created and passed during resource\nconstruction to achieve fine-grained programmatic control over provider settings. See the\n[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.\n"
+    },
+    "resources": {
+        "azurecaf:index/name:Name": {
+            "properties": {
+                "cleanInput": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string",
+                    "language": {
+                        "csharp": {
+                            "name": "ResourceName"
+                        }
+                    }
+                },
+                "passthrough": {
+                    "type": "boolean"
+                },
+                "prefixes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "randomLength": {
+                    "type": "integer"
+                },
+                "randomSeed": {
+                    "type": "integer"
+                },
+                "resourceType": {
+                    "type": "string"
+                },
+                "resourceTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "result": {
+                    "type": "string"
+                },
+                "results": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "separator": {
+                    "type": "string"
+                },
+                "suffixes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "useSlug": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "result",
+                "results"
+            ],
+            "inputProperties": {
+                "cleanInput": {
+                    "type": "boolean",
+                    "willReplaceOnChanges": true
+                },
+                "name": {
+                    "type": "string",
+                    "language": {
+                        "csharp": {
+                            "name": "ResourceName"
+                        }
+                    },
+                    "willReplaceOnChanges": true
+                },
+                "passthrough": {
+                    "type": "boolean",
+                    "willReplaceOnChanges": true
+                },
+                "prefixes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "willReplaceOnChanges": true
+                },
+                "randomLength": {
+                    "type": "integer",
+                    "willReplaceOnChanges": true
+                },
+                "randomSeed": {
+                    "type": "integer",
+                    "willReplaceOnChanges": true
+                },
+                "resourceType": {
+                    "type": "string",
+                    "willReplaceOnChanges": true
+                },
+                "resourceTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "willReplaceOnChanges": true
+                },
+                "separator": {
+                    "type": "string",
+                    "willReplaceOnChanges": true
+                },
+                "suffixes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "willReplaceOnChanges": true
+                },
+                "useSlug": {
+                    "type": "boolean",
+                    "willReplaceOnChanges": true
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering Name resources.\n",
+                "properties": {
+                    "cleanInput": {
+                        "type": "boolean",
+                        "willReplaceOnChanges": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "language": {
+                            "csharp": {
+                                "name": "ResourceName"
+                            }
+                        },
+                        "willReplaceOnChanges": true
+                    },
+                    "passthrough": {
+                        "type": "boolean",
+                        "willReplaceOnChanges": true
+                    },
+                    "prefixes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "willReplaceOnChanges": true
+                    },
+                    "randomLength": {
+                        "type": "integer",
+                        "willReplaceOnChanges": true
+                    },
+                    "randomSeed": {
+                        "type": "integer",
+                        "willReplaceOnChanges": true
+                    },
+                    "resourceType": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "resourceTypes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "willReplaceOnChanges": true
+                    },
+                    "result": {
+                        "type": "string"
+                    },
+                    "results": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string"
+                        }
+                    },
+                    "separator": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "suffixes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "willReplaceOnChanges": true
+                    },
+                    "useSlug": {
+                        "type": "boolean",
+                        "willReplaceOnChanges": true
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "azurecaf:index/namingConvention:NamingConvention": {
+            "properties": {
+                "convention": {
+                    "type": "string"
+                },
+                "maxLength": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "postfix": {
+                    "type": "string"
+                },
+                "prefix": {
+                    "type": "string"
+                },
+                "prefixes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "resourceType": {
+                    "type": "string"
+                },
+                "result": {
+                    "type": "string"
+                },
+                "suffixes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "result"
+            ],
+            "inputProperties": {
+                "convention": {
+                    "type": "string",
+                    "willReplaceOnChanges": true
+                },
+                "maxLength": {
+                    "type": "integer",
+                    "willReplaceOnChanges": true
+                },
+                "name": {
+                    "type": "string",
+                    "willReplaceOnChanges": true
+                },
+                "postfix": {
+                    "type": "string",
+                    "willReplaceOnChanges": true
+                },
+                "prefix": {
+                    "type": "string",
+                    "willReplaceOnChanges": true
+                },
+                "prefixes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "willReplaceOnChanges": true
+                },
+                "resourceType": {
+                    "type": "string",
+                    "willReplaceOnChanges": true
+                },
+                "suffixes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "willReplaceOnChanges": true
+                }
+            },
+            "stateInputs": {
+                "description": "Input properties used for looking up and filtering NamingConvention resources.\n",
+                "properties": {
+                    "convention": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "maxLength": {
+                        "type": "integer",
+                        "willReplaceOnChanges": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "postfix": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "prefix": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "prefixes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "willReplaceOnChanges": true
+                    },
+                    "resourceType": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "result": {
+                        "type": "string"
+                    },
+                    "suffixes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "willReplaceOnChanges": true
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "functions": {
+        "azurecaf:index/getEnvironmentVariable:getEnvironmentVariable": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getEnvironmentVariable.\n",
+                "properties": {
+                    "failsIfEmpty": {
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name"
+                ]
+            },
+            "outputs": {
+                "description": "A collection of values returned by getEnvironmentVariable.\n",
+                "properties": {
+                    "failsIfEmpty": {
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "value": {
+                        "type": "string",
+                        "secret": true
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "name",
+                    "value",
+                    "id"
+                ]
+            }
+        },
+        "azurecaf:index/getName:getName": {
+            "inputs": {
+                "description": "A collection of arguments for invoking getName.\n",
+                "properties": {
+                    "cleanInput": {
+                        "type": "boolean",
+                        "willReplaceOnChanges": true
+                    },
+                    "name": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "passthrough": {
+                        "type": "boolean",
+                        "willReplaceOnChanges": true
+                    },
+                    "prefixes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "willReplaceOnChanges": true
+                    },
+                    "randomLength": {
+                        "type": "integer",
+                        "willReplaceOnChanges": true
+                    },
+                    "randomSeed": {
+                        "type": "integer",
+                        "willReplaceOnChanges": true
+                    },
+                    "resourceType": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "separator": {
+                        "type": "string",
+                        "willReplaceOnChanges": true
+                    },
+                    "suffixes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "willReplaceOnChanges": true
+                    },
+                    "useSlug": {
+                        "type": "boolean",
+                        "willReplaceOnChanges": true
+                    }
+                },
+                "type": "object"
+            },
+            "outputs": {
+                "description": "A collection of values returned by getName.\n",
+                "properties": {
+                    "cleanInput": {
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "type": "string",
+                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "passthrough": {
+                        "type": "boolean"
+                    },
+                    "prefixes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "randomLength": {
+                        "type": "integer"
+                    },
+                    "randomSeed": {
+                        "type": "integer"
+                    },
+                    "resourceType": {
+                        "type": "string"
+                    },
+                    "result": {
+                        "type": "string"
+                    },
+                    "separator": {
+                        "type": "string"
+                    },
+                    "suffixes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "useSlug": {
+                        "type": "boolean"
+                    }
+                },
+                "type": "object",
+                "required": [
+                    "result",
+                    "id"
+                ]
+            }
+        }
+    }
+}
